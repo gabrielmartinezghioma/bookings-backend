@@ -4,15 +4,18 @@
   "description": "",
   "main": "index.js",
   "bin": "./bin/cli/js",
-  "scripts": {
-    "dev": "nodemon src/server",
-    "start": "node src/server",
-    "reset:migrate": "node ./src/tests/testMigrate.js",
-    "migrate": "npx sequelize db:migrate",
-    "postbuild": "npx sequelize db:migrate", 
-    "test": "jest --detectOpenHandles",
-    "pretest": "npm run reset:migrate"
+  
+    "scripts": {
+      "dev": "nodemon src/server",
+      "start": "npx sequelize db:migrate && node src/server",
+      "reset:migrate": "node ./src/tests/testMigrate.js",
+      "migrate": "npx sequelize db:migrate",
+      "postbuild": "npx sequelize db:migrate",
+      "test": "jest --detectOpenHandles",
+      "pretest": "npm run reset:migrate"
+    
   },
+  
   "keywords": [],
   "author": "",
   "license": "ISC",
