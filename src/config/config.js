@@ -11,6 +11,12 @@ module.exports = {
     use_env_variable: "POSTGRES_DATABASE",
   },
   "production": {
-    use_env_variable: "POSTGRES_DATABASE",
+    use_env_variable: "POSTGRES_DATABASE_PRODUCTION",
+    dialectOptions: {
+      ssl: {
+        require: true,
+        rejectUnauthorized: false
+      }
+    }
   }
 }

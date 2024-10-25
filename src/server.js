@@ -1,7 +1,5 @@
-require('sequelize')
 const app = require('./app');
 const { exec } = require('child_process');
-
 
 const PORT = process.env.PORT || 8080;
 
@@ -10,7 +8,7 @@ const main = async () => {
     app.listen(PORT);
     await new Promise((resolve, reject) => {
       const migrate = exec(
-        'npx sequelize db:migrate',
+        'sequelize db:migrate',
         { env: process.env },
         err => (err ? reject(err) : resolve())
       );

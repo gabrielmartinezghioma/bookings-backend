@@ -6,7 +6,7 @@
   "bin": "./bin/cli/js",
   "scripts": {
     "dev": "nodemon src/server",
-    "start": "node src/server",
+    "start": "node ./src/utils/connection && node src/server",
     "reset:migrate": "node ./src/tests/testMigrate.js",
     "test": "jest --detectOpenHandles",
     "pretest": "npm run reset:migrate"
