@@ -1,6 +1,7 @@
 const app = require('./app');
 const { exec } = require('child_process');
 require('./utils/connection')
+require("sequelize")
 
 const PORT = process.env.PORT || 8080;
 
