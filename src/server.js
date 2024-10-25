@@ -1,4 +1,4 @@
-require('sequelize-cli')
+require('sequelize')
 const app = require('./app');
 const { exec } = require('child_process');
 
