@@ -6,7 +6,7 @@ require('dotenv').config();
 const { exec } = require('child_process');
 
 
-const sequelize = new Sequelize(process.env.POSTGRES_DATABASE, {
+const sequelize = new Sequelize(process.env.POSTGRES_DATABASE_PRODUCTION, {
   dialect: 'postgres',
   dialectOptions: {
     ssl: {
