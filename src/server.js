@@ -10,7 +10,7 @@ const main = async () => {
     app.listen(PORT);
     await new Promise((resolve, reject) => {
       const migrate = exec(
-        'sequelize db:migrate',
+        'npx sequelize db:migrate',
         { env: process.env },
         err => (err ? reject(err) : resolve())
       );
