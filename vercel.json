@@ -12,5 +12,6 @@
       "dest": "/src/server.js"
     }
   ],
-  "installCommand": "npm install"
+  "installCommand": "npm install",
+  "buildCommand": "npx sequelize db:migrate"
 }
